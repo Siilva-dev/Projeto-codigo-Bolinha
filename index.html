@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolinhas Animadas</title>
+
+<style>
+   body {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  body, html { 
+  height: 100%;
+  margin: 0;
+}
+
+#container {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ball {
+  width: 15px; /* Diminuímos ainda mais o tamanho das bolinhas */
+  height: 15px; /* Diminuímos ainda mais o tamanho das bolinhas */
+  background-color: rgba(128, 0, 128, 0.8); /* Cor roxa com transparência */
+  border-radius: 50%;
+  position: absolute;
+  animation: fall var(--duration) linear infinite;
+}
+
+.ball.small { width: 4px; height: 5px; } /* Diminuímos ainda mais o tamanho das bolinhas */
+.ball.medium { width: 8px; height: 8px; } /* Diminuímos ainda mais o tamanho das bolinhas */
+.ball.large { width: 12px; height: 12px; } /* Diminuímos ainda mais o tamanho das bolinhas */
+
+.transparent { opacity: 0.6; } /* Bolinhas transparentes */
+
+@keyframes fall {
+  0% { 
+    top: -20px; 
+    left: calc(var(--randX) * 100%); /* Posição horizontal aleatória */
+  }
+  100% { 
+    top: 100%; 
+    left: calc(var(--randX) * 100%); /* Posição horizontal aleatória */
+  }
+}
+</style>
+
+</head>
+<body>
+  <div id="container">
+    <div class="ball small purple transparent"></div>
+    <div class="ball medium purple"></div>
+    <div class="ball large purple transparent"></div>
+    <div class="ball small purple transparent"></div>
+    <div class="ball medium purple"></div>
+    <div class="ball large purple transparent"></div>
+    <div class="ball small purple transparent"></div>
+    <div class="ball medium purple"></div>
+    <div class="ball large purple transparent"></div>
+    <div class="ball small purple transparent"></div>
+    <div class="ball medium purple"></div>
+    <div class="ball large purple transparent"></div>
+    <div class="ball small purple transparent"></div>
+    <div class="ball medium purple"></div>
+    <div class="ball large purple transparent"></div>
+    <div class="ball small purple transparent"></div>
+    <div class="ball medium purple"></div>
+    <div class="ball large purple transparent"></div>
+    <div class="ball small purple transparent"></div>
+    <div class="ball medium purple"></div>
+    <div class="ball large purple transparent"></div>
+    <div class="ball small purple transparent"></div>
+    <div class="ball medium purple"></div>
+    <div class="ball large purple transparent"></div>
+    <div class="ball small purple transparent"></div>
+    <div class="ball medium purple"></div>
+    <div class="ball large purple transparent"></div>
+    <div class="ball small purple transparent"></div>
+    <div class="ball medium purple"></div>
+    <div class="ball large purple transparent"></div>
+    <div class="ball small purple transparent"></div>
+    <div class="ball medium purple"></div>
+    <div class="ball large purple transparent"></div>
+    <div class="ball small purple transparent"></div>
+    <div class="ball medium purple"></div>
+    <div class="ball large purple transparent"></div>
+    <!-- Adicione mais bolinhas se desejar -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
